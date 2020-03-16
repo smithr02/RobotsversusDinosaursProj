@@ -10,6 +10,15 @@ namespace RobotsVsDinosaurs
     {
         static void Main(string[] args)
         {
+
+
+
+            Battlefield warzone = new Battlefield(); // created a new battlfield 
+            Console.WriteLine(warzone.dinoSquad.Trex.health); //display trex health after the attack
+            if (warzone.isGameFinished())
+            {
+                
+            }
         }
     }
 }
