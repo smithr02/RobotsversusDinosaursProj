@@ -13,12 +13,8 @@ namespace RobotsVsDinosaurs
 
 
 
-            Battlefield warzone = new Battlefield(); // created a new battlfield 
-            Console.WriteLine(warzone.dinoSquad.Trex.health); //display trex health after the attack
-            if (warzone.isGameFinished())
-            {
-                
-            }
+            Battlefield warzone = new Battlefield();
+            warzone.RunGame();
         }
     }
 }

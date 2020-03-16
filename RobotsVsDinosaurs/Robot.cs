@@ -12,6 +12,7 @@ namespace RobotsVsDinosaurs
         public int health;
         public int powerLevel;
         public int attackPower;
+        public bool Dead = false;
         public Robot(string name, int health, int powerLevel, int attackPower)  //setting the variables for the robots
         {
             //pass name into constructor
@@ -32,6 +33,11 @@ namespace RobotsVsDinosaurs
         {
             DinoToAttack.health = DinoToAttack.health - attackPower;
             Console.WriteLine($"{name} attacked {DinoToAttack.name} for {attackPower} damage");
+            if (DinoToAttack.health <= 0)
+            {
+                DinoToAttack.dead = true;
+                Console.WriteLine("This character is dead!");
+            }
         }
 
     }

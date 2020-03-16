@@ -12,6 +12,7 @@ namespace RobotsVsDinosaurs
         public int health;
         public int energy;
         public int attackPower;
+        public bool dead = false;
 
         public Dinosaur(string name, int health, int energy, int attackPower)  //setting the variables for the dinosaurs
         {
@@ -37,7 +38,11 @@ namespace RobotsVsDinosaurs
             RobotToAttack.health = RobotToAttack.health - attackPower;
             Console.WriteLine($"{name} attacked {RobotToAttack.name} for {attackPower} damage"); //This is where we created a method attack, calling the robot class and named it robotToAttack.
             // Then setRobotToAttack to the health of a specified robot made it equal to that minus the attack power of the dinosaur (ie. robots health - dinosaurs attack power.
-            
+            if (RobotToAttack.health <= 0)
+            {
+                RobotToAttack.Dead = true;
+                Console.WriteLine("This character is dead!");
+            }
         }
     }
 }
