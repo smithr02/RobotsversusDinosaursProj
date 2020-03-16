@@ -47,6 +47,10 @@ namespace RobotsVsDinosaurs
         {
             for (int i = 0; i < 3; i++)
             {
+                if (robotSquad.Robots[i].Dead == true )
+                {
+                    continue;
+                }
                 Console.WriteLine($"it is {robotSquad.Robots[i].name} turn");
                 Console.WriteLine("Who do you want to attack?  Pick 1 (Trex) , Pick 2 (Tritop) or Pick 3 (Tero)");
                 int userInput = int.Parse(Console.ReadLine());
@@ -65,6 +69,10 @@ namespace RobotsVsDinosaurs
 
             for (int i = 0; i < 3; i++)
             {
+                if (dinoSquad.Dinosaurs[i].dead == true)
+                {
+                    continue;
+                }
                 Console.WriteLine($"it is {dinoSquad.Dinosaurs[i].name} turn");
                 Console.WriteLine("Who do you want to attack? Pick 1 (Ultron), Pick 2 (Optimus) or Pick 3 (BumbleBee)");
                 int userInput = int.Parse(Console.ReadLine());
@@ -81,6 +89,6 @@ namespace RobotsVsDinosaurs
             }
           
         }
-        
+     
     }
 }
