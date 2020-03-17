@@ -17,26 +17,26 @@ namespace RobotsVsDinosaurs
         }
         public void RunGame()
         {
-            while (!isGameFinished())
+            while (!IsGameFinished())
             {
                 AttackSequence();
             }
         }
-        public bool isGameFinished() // boolean to deteremine if game is over if either all dinos or all robots health equals zero, if true game is over if false game continues
+        public bool IsGameFinished() // boolean to deteremine if game is over if either all dinos or all robots health equals zero, if true game is over if false game continues
         {
             bool returnValue = false;
 
-            if ((dinoSquad.Trex.health <= 0 || dinoSquad.Tritop.health <= 0 || dinoSquad.Tero.health <= 0) && (robotSquad.Ultron.health <= 0 || robotSquad.Optimus.health <= 0 || robotSquad.BumbleBee.health <= 0))
+            if ((dinoSquad.Trex.health <= 0 && dinoSquad.Tritop.health <= 0 && dinoSquad.Tero.health <= 0) || (robotSquad.Ultron.health <= 0 && robotSquad.Optimus.health <= 0 && robotSquad.BumbleBee.health <= 0))
             {
                 returnValue = true;
             }
 
-            int numberOfCombatants = 3;
-            while (numberOfCombatants == 0)
-            {
-                numberOfCombatants--;
-                Console.WriteLine(numberOfCombatants);
-            }
+           //int numberOfCombatants = 3;
+            //while (numberOfCombatants == 0)
+           // {
+               // numberOfCombatants--;
+               // Console.WriteLine(numberOfCombatants);
+            //}
             
 
 
@@ -87,6 +87,7 @@ namespace RobotsVsDinosaurs
                 }
                 
             }
+            
           
         }
      
